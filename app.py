@@ -10,7 +10,7 @@ def hello_world():
 
 @app.route('/home/<username>')
 def web_home(username):
-    return 'Hello, %' % username
+    return 'Hello, %s' % username
 
 
 if __name__ == '__main__':
