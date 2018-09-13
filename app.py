@@ -5,8 +5,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    return 'Index'
+
+
+@app.route('/home/<username>')
+def web_home(username):
+    return 'Hello, %' % username
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
