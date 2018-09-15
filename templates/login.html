@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login In Admin</title>
+</head>
+<body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_style.css') }}">
+    <form action='{{ url_for('.redirect_to_admin') }}' method="POST">
+        <div id="username">
+            用户名：
+            <input name="id_username" type="text" style="height: 25px;width: 150px;">
+        </div>
+        <div id="password">
+            密　码：
+            <input name="id_password" type="password" style="height: 25px;width: 150px;">
+        </div>
+        <div style="margin-left: 32%;">
+            <input type="submit" style="width: 75px;height: 35px;">
+        </div>
+    </form>
+</body>
+</html>

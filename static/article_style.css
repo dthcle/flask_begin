@@ -1,0 +1,33 @@
+body
+{
+    background-color: blanchedalmond;
+}
+label
+{
+
+}
+h1
+{
+    font-family: 宋体, serif;
+    font-size: 35px;
+    text-align: center;
+}
+#article_content
+{
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: silver;
+    font-family: 宋体, serif;
+    font-size: 25px;
+    text-align: left;
+}
+
+#footer
+{
+    margin-right: 15%;
+    margin-left:  15%;
+    font-family: 宋体, serif;
+    background-color: skyblue;
+    font-size: 15px;
+    text-align: right;
+}
