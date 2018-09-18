@@ -11,11 +11,11 @@
     <HR>
     <div id="article_content">
         {% block content %}{% endblock %}
+    <br>
+        <img src="{% block image_address %}{% endblock %}">
     </div>
     <div id="footer">
-        {% block footer %}
         {{ footer }}
-        {% endblock %}
     </div>
 </body>
 </html>

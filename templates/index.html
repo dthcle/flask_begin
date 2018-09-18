@@ -6,16 +6,17 @@
 </head>
 <body>
     <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
-    <h1>Welcome to {{ author }}</h1>
+    <h1>Welcome!</h1>
     <div class="article_list">
         {% for each_article in article_list %}
             <div class="each_article">
-                <a style="display: block" href="./article/{{  '.'.join(each_article.split('.')[:-1]) }}">
-                    {{ '.'.join(each_article.split('.')[:-1]) }}
+                <a class="each_article_title" href="./article/{{ each_article[1] }}">
+                    {{ each_article[1] }}
                 </a>
-{#                <a>#}
-{#                    {{ content }}#}
-{#                </a>#}
+                <br>
+                <a class="each_article_content">
+                    {{ article_content_list[article_list.index(each_article)] }}
+                </a>
             </div>
         {% endfor %}
     </div>

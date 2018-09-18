@@ -1,5 +1,7 @@
 body
 {
+    margin-left: 15%;
+    margin-right: 15%;
     background-color: blanchedalmond;
 }
 label
@@ -14,18 +16,17 @@ h1
 }
 #article_content
 {
-    margin-left: 15%;
-    margin-right: 15%;
     background-color: silver;
     font-family: 宋体, serif;
     font-size: 25px;
     text-align: left;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+    padding: 15px;
+    margin-bottom: 1%;
 }
 
 #footer
 {
-    margin-right: 15%;
-    margin-left:  15%;
     font-family: 宋体, serif;
     background-color: skyblue;
     font-size: 15px;
