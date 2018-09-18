@@ -15,7 +15,8 @@ info = constant.Info()
 # 主界面
 @app.route('/')
 def index_page():
-    return render_template('index.html', article_content=Markup('第一段<br>第二段<br>第三段')
+    article_list = Article.load_articles()
+    return render_template('index.html', author=info.username, article_list=article_list
                            , footer=Markup(info.footer), background_image_address=Markup(info.background_image_address))
 
 

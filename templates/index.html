@@ -1,18 +1,26 @@
-{% extends 'template.html' %}
-{% block head %}
-{% endblock %}
-{% block title %}
-    Index for this page
-{% endblock %}
-{% block article_title %}
-    {{ article_title }}
-{% endblock %}
-{% block label %}
-    {{ label }}
-{% endblock %}
-{% block content %}
-    {{ article_content }}
-{% endblock %}
-{% block footer %}
-    {{ super() }}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    <h1>Welcome to {{ author }}</h1>
+    <div class="article_list">
+        {% for each_article in article_list %}
+            <div class="each_article">
+                <a style="display: block" href="./article/{{  '.'.join(each_article.split('.')[:-1]) }}">
+                    {{ '.'.join(each_article.split('.')[:-1]) }}
+                </a>
+{#                <a>#}
+{#                    {{ content }}#}
+{#                </a>#}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="footer">
+        {{ footer }}
+    </div>
+</body>
+</html>

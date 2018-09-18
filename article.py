@@ -1,4 +1,5 @@
 import pickle
+import os
 
 
 class Article:
@@ -15,4 +16,13 @@ class Article:
         with open('./article/'+article_title+'.art', 'rb') as art:
             tmp_art = pickle.load(art)
         return tmp_art
+
+    @staticmethod
+    def load_articles():
+        os.chdir('./article')
+        dirs = os.listdir(os.getcwd())
+        os.chdir('..')
+        return dirs
+
+
 
